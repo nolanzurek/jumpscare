@@ -13,16 +13,19 @@ export function App() {
           { id: "3", text: "item 3" },
         ],
       },
-      "My list 2": {
-        id: "2",
-        items: [
-          { id: "1", text: "item 4" },
-          { id: "2", text: "item 5" },
-          { id: "3", text: "item 6" },
-        ],
-      },
     },
   });
+
+  useEffect(() => {
+    const storedData = localStorage.getItem("appData");
+    if (storedData) {
+      setAppData(JSON.parse(storedData));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("appData", JSON.stringify(appData));
+  }, [appData]);
 
   return (
     <>
