@@ -1,0 +1,33 @@
+#page-content-container {
+  background: red;
+  display: flex;
+  flex-direction: row;
+}
+
+#panes-container {
+  display: flex;
+  flex-direction: row;
+  /* in total, the panes should occupy the entire width of the available area */
+  width: 100%;
+  overflow-x: auto;
+}
+
+#add-pane-button {
+  margin-left: auto;
+  max-width: 100px;
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+  padding: 0.25em;
+  cursor: pointer;
+  font-size: 3em;
+}
+
+#add-pane-button:hover {
+  background-color: #eeeeee;
+}
+
+#add-pane-button:active {
+  background-color: #dddddd;
+}

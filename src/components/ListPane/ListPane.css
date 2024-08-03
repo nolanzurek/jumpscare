@@ -1,0 +1,41 @@
+.list-pane {
+  background: green;
+  /* width and height */
+  width: 100%;
+  min-width: 0px;
+  height: 100vh;
+  position: relative;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: #33333370;
+  padding: 10px;
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+  margin: 1em;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 0.5em;
+}
+
+.remove-list-button {
+  background-color: #33333370;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  cursor: pointer;
+  width: calc(100% - 2em);
+  margin: 0em 1em;
+}

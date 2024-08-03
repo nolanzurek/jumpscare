@@ -1,0 +1,20 @@
+.close-button {
+  height: 2em;
+  margin-right: 0.5em;
+  background-color: #33333370;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  aspect-ratio: 1;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.close-button:hover {
+  background-color: #333333a0;
+}
+
+.close-button:active {
+  background-color: #333333;
+  color: white;
+}

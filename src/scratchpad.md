@@ -1,0 +1,4 @@
+- keep the state of the lists in local state/context
+- have a set timout thing that saves it to and from local storage every (30 sec?)
+- load from local storage on startup
+- fix the "deleting identical things deletes them all" bug by adding IDs to list items (this should make the search through the list more efficient anyway)
