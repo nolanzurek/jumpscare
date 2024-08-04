@@ -5,6 +5,10 @@
   min-width: 0px;
   height: 100vh;
   position: relative;
+  overflow-y: scroll;
+  /* hide scrollbars */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .title-section {

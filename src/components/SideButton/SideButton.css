@@ -1,0 +1,65 @@
+#add-pane-button {
+  margin-left: auto;
+  max-width: 100px;
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+  padding: 0.25em;
+  cursor: pointer;
+  font-size: 3em;
+  height: 100%;
+}
+
+#settings-button {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* !!!! MAGIC */
+  height: 1.31em;
+  /* standardize colors */
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+  /* padding: 0.25em; */
+  cursor: pointer;
+  font-size: 2em;
+}
+
+#settings-button:hover {
+  background-color: #333333;
+}
+
+#settings-button:active {
+  background-color: #222222;
+}
+
+#add-pane-button-container {
+  position: relative;
+}
+
+#add-pane-button:hover {
+  background-color: #eeeeee;
+}
+
+#add-pane-button:active {
+  background-color: #dddddd;
+}
+
+/* modal */
+
+#settings-dialog {
+  /* display: none; */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: white;
+  padding: 20px;
+  border: none;
+}

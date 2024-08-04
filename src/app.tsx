@@ -1,5 +1,7 @@
 import { useState, useEffect } from "preact/hooks";
 import { ListPane } from "./components/ListPane/ListPane";
+import { SideButton } from "./components/SideButton/SideButton";
+import type { GlobalState } from "./types/statefulTypes";
 import "./app.css";
 
 export function App() {
@@ -68,34 +70,9 @@ export function App() {
               }}
             />
           ))}
-          <button
-            id="add-pane-button"
-            onClick={() => {
-              const newLists = { ...appData.listData };
-              const newId =
-                Math.max(...Object.values(newLists).map((l) => Number(l.id))) +
-                1;
-              newLists[`My list ${newId}`] = { id: `${newId}`, items: [] };
-              setAppData({ listData: newLists });
-            }}
-          >
-            +
-          </button>
+          <SideButton appData={appData} setAppData={setAppData} />
         </div>
       </div>
     </>
   );
 }
-
-type GlobalState = {
-  listData: Record<string, ItemList>; // listId -> listItems
-  // later: settings, etc
-};
-
-type ItemList = {
-  id: string;
-  items: {
-    id: string;
-    text: string;
-  }[];
-};
