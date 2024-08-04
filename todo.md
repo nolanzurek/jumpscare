@@ -1,3 +1,8 @@
 - make a better button css class that can be shared for close, edit, etc buttons
 - clean up the functions for editing the state
 - settings and list export
+- use preact portal to render the settings as an actual modal
+- themes
+- write using context
+- md formatting for list items
+- export button in settings that downloads a JSON file
