@@ -47,6 +47,12 @@ export function App() {
                 });
                 setAppData({ listData: newLists });
               }}
+              changeListName={(newName: string) => {
+                const newLists = { ...appData.listData };
+                newLists[newName] = newLists[name];
+                delete newLists[name];
+                setAppData({ listData: newLists });
+              }}
               // improve the type of id using keyof
               removeFromList={(itemToDelete: { id: string; text: string }) => {
                 const newLists = { ...appData.listData };

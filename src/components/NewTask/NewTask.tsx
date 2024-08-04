@@ -3,6 +3,7 @@ import "./NewTask.css";
 export function NewTask(props: { appendToList: (item: string) => void }) {
   return (
     <input
+      className="new-task-input"
       type="text"
       placeholder="New Item"
       onKeyDown={(event) => {

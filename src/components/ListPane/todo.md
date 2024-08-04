@@ -1,0 +1,3 @@
+- make a better button css class that can be shared for close, edit, etc buttons
+- clean up the functions for editing the state
+- settings and list export
