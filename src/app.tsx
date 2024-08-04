@@ -6,16 +6,7 @@ import "./app.css";
 
 export function App() {
   const [appData, setAppData] = useState<GlobalState>({
-    listData: {
-      "My list 1": {
-        id: "1",
-        items: [
-          { id: "1", text: "item 1" },
-          { id: "2", text: "item 2" },
-          { id: "3", text: "item 3" },
-        ],
-      },
-    },
+    listData: {},
   });
 
   useEffect(() => {

@@ -7,7 +7,7 @@ export function ListItem(props: { text: string; removeItem: () => void }) {
       <button className="close-button" onClick={props.removeItem}>
         ✕
       </button>
-      <Markdown markdown={props.text} />
+      <span>{Markdown(props.text, { markupOpts: {}, markedOpts: {} })}</span>
     </li>
   );
 }
