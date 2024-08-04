@@ -19,14 +19,14 @@ export function App() {
   });
 
   useEffect(() => {
-    const storedData = localStorage.getItem("appData");
+    const storedData = localStorage.getItem("jumpscare-data");
     if (storedData) {
       setAppData(JSON.parse(storedData));
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("appData", JSON.stringify(appData));
+    localStorage.setItem("jumpscare-data", JSON.stringify(appData));
   }, [appData]);
 
   return (
@@ -70,7 +70,18 @@ export function App() {
               }}
             />
           ))}
-          <SideButton appData={appData} setAppData={setAppData} />
+          <SideButton
+            addPane={() => {
+              const newLists = { ...appData.listData };
+              const newId =
+                Math.max(
+                  0,
+                  ...Object.values(newLists).map((l) => Number(l.id))
+                ) + 1;
+              newLists[`My list ${newId}`] = { id: `${newId}`, items: [] };
+              setAppData({ listData: newLists });
+            }}
+          />
         </div>
       </div>
     </>

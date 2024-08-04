@@ -1,5 +1,5 @@
 export function downloadData() {
-  const storedData = localStorage.getItem("appData");
+  const storedData = localStorage.getItem("jumpscare-data");
   if (storedData) {
     const rawData = JSON.parse(storedData).listData;
     let exportingData: Record<string, string[]> = {};
