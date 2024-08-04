@@ -1,3 +1,4 @@
+import Markdown from "preact-markdown";
 import "./ListItem.css";
 
 export function ListItem(props: { text: string; removeItem: () => void }) {
@@ -6,7 +7,7 @@ export function ListItem(props: { text: string; removeItem: () => void }) {
       <button className="close-button" onClick={props.removeItem}>
         ✕
       </button>
-      <span>{props.text}</span>
+      <Markdown markdown={props.text} />
     </li>
   );
 }
