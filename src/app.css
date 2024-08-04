@@ -1,5 +1,4 @@
 #page-content-container {
-  background: red;
   display: flex;
   flex-direction: row;
 }
@@ -10,4 +9,20 @@
   /* in total, the panes should occupy the entire width of the available area */
   width: 100%;
   overflow-x: auto;
+}
+
+#empty-list-message {
+  background: #333333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+#empty-list-message p {
+  margin: 0;
+  padding: 2em;
 }

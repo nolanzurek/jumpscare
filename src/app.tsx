@@ -70,6 +70,14 @@ export function App() {
               }}
             />
           ))}
+          {Object.keys(appData.listData).length === 0 && (
+            <div id="empty-list-message">
+              <p>
+                <strong>No lists found.</strong>
+                <br /> Create one by clicking the "+" button on the right.
+              </p>
+            </div>
+          )}
           <SideButton
             addPane={() => {
               const newLists = { ...appData.listData };
