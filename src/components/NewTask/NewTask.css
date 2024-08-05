@@ -6,6 +6,6 @@
   width: calc(100% - 2em);
   padding: 1em;
   border: none;
-  background-color: #ffffff70;
+  background-color: var(--light-overlay);
   margin-right: 0;
 }

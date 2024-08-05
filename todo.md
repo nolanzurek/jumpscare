@@ -7,3 +7,5 @@
 - md formatting for list items
 - export button in settings that downloads a JSON file
 - make themes a global type and just improt it instead of redeclaring all the time
+- separate out dark/light mode and color scheme into separate toggles
+- make these affect the lightness/tone of the colors as well (color scheme is just hue)

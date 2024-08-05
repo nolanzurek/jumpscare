@@ -37,7 +37,10 @@ export function SettingsContent(props: {
               name="theme"
               value={theme}
               checked={props.theme === theme}
-              onChange={() => props.setTheme(theme)}
+              onChange={() => {
+                props.setTheme(theme);
+                document.documentElement.setAttribute("data-theme", theme);
+              }}
             />{" "}
             {theme}
           </label>

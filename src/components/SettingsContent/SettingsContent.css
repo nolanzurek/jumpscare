@@ -1,4 +1,6 @@
 #settings-content {
+  background: var(--bg-0);
+  color: var(--ui-text-0);
 }
 
 #settings-content * {
@@ -9,4 +11,14 @@
   display: flex;
   /* dont show radio buttons */
   flex-direction: column;
+}
+
+#download-data-button {
+  background-color: var(--accent);
+  color: var(--ui-text);
+  border: none;
+  outline: none;
+  padding: 0.25em;
+  cursor: pointer;
+  font-size: 1em;
 }

@@ -1,8 +1,8 @@
 #add-pane-button {
   margin-left: auto;
   max-width: 100px;
-  background-color: white;
-  color: black;
+  background-color: var(--bg-0);
+  color: var(--ui-text-0);
   border: none;
   outline: none;
   padding: 0.25em;
@@ -19,8 +19,8 @@
   /* !!!! MAGIC */
   height: 1.31em;
   /* standardize colors */
-  background-color: black;
-  color: white;
+  background-color: var(--bg-1);
+  color: var(--ui-text-0);
   border: none;
   outline: none;
   /* padding: 0.25em; */
@@ -29,11 +29,11 @@
 }
 
 #settings-button:hover {
-  background-color: #333333;
+  background-color: var(--bg-1-hover);
 }
 
 #settings-button:active {
-  background-color: #222222;
+  background-color: var(--bg-1-active);
 }
 
 #add-pane-button-container {
@@ -41,11 +41,11 @@
 }
 
 #add-pane-button:hover {
-  background-color: #eeeeee;
+  background-color: var(--bg-0-hover);
 }
 
 #add-pane-button:active {
-  background-color: #dddddd;
+  background-color: var(--bg-0-active);
 }
 
 /* modal */
@@ -59,7 +59,7 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: white;
+  background-color: var(--bg-0);
   padding: 20px;
   border: none;
 }

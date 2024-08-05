@@ -7,7 +7,7 @@
 .close-button {
   height: 2em;
   margin-right: 0.5em;
-  background-color: #33333370;
+  background-color: var(--dark-overlay);
   font-weight: bold;
   border: none;
   outline: none;
@@ -21,6 +21,6 @@
 }
 
 .close-button:active {
-  background-color: #333333;
-  color: white;
+  background-color: var(--ui-text-0);
+  color: var(--bg-1);
 }

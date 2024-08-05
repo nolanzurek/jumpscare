@@ -1,5 +1,8 @@
+/* import themes so the theme data is visible to all the css */
+@import "./data/themes.css";
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-ui);
   margin: 0;
   padding: 0;
 }

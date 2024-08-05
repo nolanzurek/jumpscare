@@ -1,6 +1,4 @@
 .list-pane {
-  background: green;
-  /* width and height */
   width: 100%;
   min-width: 0px;
   height: 100vh;
@@ -16,13 +14,13 @@
   flex-direction: row;
   align-items: center;
   padding: 1em;
-  background-color: #33333370;
+  background-color: var(--dark-overlay);
   min-height: 2em;
 }
 
 .edit-list-title-button {
-  background-color: #33333370;
-  color: white;
+  background-color: var(--dark-overlay);
+  color: var(--bg-0);
   border: none;
   outline: none;
   padding: 0.5em;
@@ -34,8 +32,8 @@
 }
 
 .edit-list-title-input {
-  background-color: #33333370;
-  color: white;
+  background-color: var(--dark-overlay);
+  color: var(--bg-0);
   border: none;
   outline: none;
   padding: 0.5em;
@@ -43,14 +41,14 @@
 }
 
 .edit-list-title-input::placeholder {
-  color: white;
+  color: var(--bg-0);
 }
 
 h2 {
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
-  color: white;
+  color: var(--bg-0);
   margin: 0;
 }
 
@@ -65,8 +63,8 @@ li {
 }
 
 .remove-list-button {
-  background-color: #33333370;
-  color: white;
+  background-color: var(--dark-overlay);
+  color: var(--bg-0);
   border: none;
   outline: none;
   padding: 0.5em;
