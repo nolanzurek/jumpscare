@@ -75,3 +75,11 @@ li {
   margin: 0em 1em;
   border-radius: 0.5em;
 }
+
+.remove-list-button:hover {
+  background-color: #33333390;
+}
+
+.remove-list-button:active {
+  background-color: #333333bb;
+}
