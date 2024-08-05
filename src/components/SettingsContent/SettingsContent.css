@@ -1,0 +1,12 @@
+#settings-content {
+}
+
+#settings-content * {
+  margin: 0.5em 0em;
+}
+
+#theme-selector-container {
+  display: flex;
+  /* dont show radio buttons */
+  flex-direction: column;
+}

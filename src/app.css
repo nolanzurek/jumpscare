@@ -12,8 +12,8 @@
 }
 
 #empty-list-message {
-  background: #333333;
-  color: white;
+  background: #dddddd;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;

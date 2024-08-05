@@ -6,3 +6,4 @@
 - write using context
 - md formatting for list items
 - export button in settings that downloads a JSON file
+- make themes a global type and just improt it instead of redeclaring all the time

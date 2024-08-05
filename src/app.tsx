@@ -3,8 +3,12 @@ import { ListPane } from "./components/ListPane/ListPane";
 import { SideButton } from "./components/SideButton/SideButton";
 import type { GlobalState } from "./types/statefulTypes";
 import "./app.css";
+import { themes } from "./data/themes";
+import type { Theme } from "./types/statefulTypes";
 
 export function App() {
+  // data
+
   const [appData, setAppData] = useState<GlobalState>({
     listData: {},
   });
@@ -20,6 +24,21 @@ export function App() {
     localStorage.setItem("jumpscare-data", JSON.stringify(appData));
   }, [appData]);
 
+  // themes
+
+  const [curTheme, setCurTheme] = useState<Theme>("phi");
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("jumpscare-theme");
+    if (storedTheme) {
+      setCurTheme(storedTheme as Theme);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("jumpscare-theme", curTheme as Theme);
+  }, [curTheme]);
+
   return (
     <>
       {/* <h1>Jumpscare</h1> */}
@@ -31,7 +50,7 @@ export function App() {
               name={name}
               list={items}
               // derived from phi/tau: the "most irrational number" should generate the best dispersion of colors
-              color={i * 98.722}
+              color={themes[curTheme](i)}
               appendToList={(item: string) => {
                 const newLists = { ...appData.listData };
                 newLists[name].items.push({
@@ -80,6 +99,8 @@ export function App() {
               newLists[`My list ${newId}`] = { id: `${newId}`, items: [] };
               setAppData({ listData: newLists });
             }}
+            theme={curTheme}
+            setTheme={setCurTheme}
           />
         </div>
       </div>

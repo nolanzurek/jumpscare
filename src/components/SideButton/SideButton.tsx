@@ -1,8 +1,13 @@
 import { useState } from "preact/hooks";
 import { SettingsContent } from "../SettingsContent/SettingsContent";
 import "./SideButton.css";
+import type { Theme } from "../../types/statefulTypes";
 
-export function SideButton(props: { addPane: () => void }) {
+export function SideButton(props: {
+  addPane: () => void;
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
+}) {
   const [showSettings, setShowSettings] = useState(false);
 
   return (
@@ -18,7 +23,11 @@ export function SideButton(props: { addPane: () => void }) {
       </button>
       {
         <dialog id="settings-dialog" open={showSettings}>
-          <SettingsContent closeSettings={() => setShowSettings(false)} />
+          <SettingsContent
+            closeSettings={() => setShowSettings(false)}
+            theme={props.theme}
+            setTheme={props.setTheme}
+          />
         </dialog>
       }
     </div>
