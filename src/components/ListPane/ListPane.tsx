@@ -1,7 +1,7 @@
 // note: preact might need to be imported to fix the "can't find module" error when importing other components
 // but now it works? odd
 // import Preact from "preact";
-import { useEffect, useState } from "preact/hooks";
+import { useState } from "preact/hooks";
 
 import { NewTask } from "../NewTask/NewTask";
 import { ListItem } from "../ListItem/ListItem";

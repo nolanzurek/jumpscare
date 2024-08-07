@@ -5,8 +5,12 @@ import "./ListItem.css";
 export function ListItem(props: { text: string; removeItem: () => void }) {
   // if the list changes, rerender the mathjax
   useEffect(() => {
-    MathJax.typeset();
-    return () => MathJax.typesetClear();
+    try {
+      MathJax.typeset();
+      return () => MathJax.typesetClear();
+    } catch (e) {
+      // womp womp
+    }
   }, [props.text]);
 
   return (
